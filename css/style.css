@@ -10,15 +10,15 @@
 }
 
 :root {
-   
-    --bg-color: #1a1a2e;      
+    
+    --bg-color: #1a1a2e;       
     --bg-alt-color: #0f101c;   
     --text-color: #f0f0f0;     
     --main-color: #00bcd4;     
     --secondary-color: #92b0b3;
     --card-bg: #222543;        
     --border-color: #3e446f;   
-    --glass-opacity: 0.1;     
+    --glass-opacity: 0.1;    
     --transition: all 0.4s ease;
 }
 
@@ -204,7 +204,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-   
+    
     background: linear-gradient(45deg, var(--bg-alt-color), var(--bg-color));
     background-size: 400% 400%;
     animation: gradientShift 10s ease infinite;
@@ -379,7 +379,7 @@ body:not(.light-mode) .skill-card {
     font-size: 3rem;
     color: var(--main-color);
     margin-bottom: 15px;
-    animation: bounce 2s infinite ease-in-out; 
+    animation: none; 
 }
 
 @keyframes bounce {
@@ -500,89 +500,6 @@ body:not(.light-mode) .skill-card {
     color: var(--main-color);
 }
 
-
-.testimonial-slider-container {
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-}
-
-.testimonial-slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out; 
-}
-
-.testimonial-card {
-    min-width: 100%; 
-    padding: 40px;
-    background: var(--card-bg);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    border: 1px solid var(--border-color);
-}
-
-.testimonial-card .quote {
-    font-size: 1.1rem;
-    font-style: italic;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.client-info {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
-    border-top: 1px dashed var(--border-color);
-    padding-top: 20px;
-}
-
-.client-info img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.client-info h4 {
-    color: var(--main-color);
-}
-
-.client-info p {
-    color: var(--secondary-color);
-    font-size: 0.9rem;
-}
-
-.slider-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    pointer-events: none; 
-}
-
-.slider-nav button {
-    pointer-events: all; 
-    background: var(--main-color);
-    color: var(--bg-color);
-    border: none;
-    padding: 10px 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.2rem;
-    opacity: 0.8;
-    transition: var(--transition);
-}
-
-.slider-nav button:hover {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-
 .contact-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -641,7 +558,7 @@ body:not(.light-mode) .skill-card {
     display: inline-block;
 }
 
-/* Animação Social Icons */
+
 .social-icon:hover {
     color: var(--main-color);
     transform: scale(1.2) rotate(5deg);
@@ -695,7 +612,6 @@ body:not(.light-mode) .skill-card {
 .delay-2 { transition-delay: 0.2s; }
 .delay-3 { transition-delay: 0.3s; }
 .delay-4 { transition-delay: 0.4s; }
-
 
 
 
