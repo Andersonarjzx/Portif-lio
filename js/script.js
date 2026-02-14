@@ -141,38 +141,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     
-    const skillObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                skillBars.forEach(bar => {
-                    const progress = bar.getAttribute('data-progress'); 
-                    
-                    
-                    bar.style.width = progress; 
-                    
-                    const label = bar.parentElement.nextElementSibling;
-                    const percentage = parseInt(progress.replace('%', ''));
-                    let current = 0;
-                    
-                    
-                    const duration = 2000; 
-                    const steps = percentage; 
-                    const intervalTime = duration / steps;
-                    
-                    const updateLabel = setInterval(() => {
-                        if (current >= percentage) {
-                            clearInterval(updateLabel);
-                            label.textContent = `${percentage}%`;
-                            current++;
-                            label.textContent = `${current}%`;
-                        }
-                    }, intervalTime); 
-                });
-                skillObserver.unobserve(entry.target); 
-            }
-        });
-    }, { threshold: 0.5 }); 
-    
+    const skillObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            skillBars.forEach(bar => {
+                const progress = bar.getAttribute("data-progress");
+                const target = parseInt(progress);
+                const label = bar.parentElement.nextElementSibling;
+
+                bar.style.width = progress;
+
+                let current = 0;
+                const duration = 1500;
+                const interval = duration / target;
+
+                const counter = setInterval(() => {
+                    if (current >= target) {
+                        clearInterval(counter);
+                        label.textContent = target + "%";
+                    } else {
+                        current++;
+                        label.textContent = current + "%";
+                    }
+                }, interval);
+            });
+
+            skillObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.4 });
+
+skillObserver.observe(skillsSection);
+
     if (skillsSection) {
         skillObserver.observe(skillsSection);
     }
