@@ -147,7 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
             skillBars.forEach(bar => {
                 const progress = bar.getAttribute("data-progress");
                 const target = parseInt(progress);
-                const label = bar.parentElement.nextElementSibling;
+                const label = bar.closest(".skill-card").querySelector(".progress-label");
+
 
                 bar.style.width = progress;
 
@@ -169,9 +170,11 @@ document.addEventListener('DOMContentLoaded', () => {
             skillObserver.unobserve(entry.target);
         }
     });
-}, { threshold: 0.4 });
+}, { 
+    threshold: 0.15,
+    rootMargin: "0px 0px -80px 0px"
+});
 
-skillObserver.observe(skillsSection);
 
     if (skillsSection) {
         skillObserver.observe(skillsSection);
