@@ -785,3 +785,84 @@ body:not(.light-mode) .skill-card {
 
 }
 
+
+.skills-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.tab-btn {
+    padding: 12px 30px;
+    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-color);
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab-btn i { margin-right: 8px; }
+
+.tab-btn.active {
+    background: var(--primary-color);
+    color: #1aa956;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+
+.tab-content { display: none; animation: fadeIn 0.5s ease; }
+.tab-content.active { display: block; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.skill-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-bottom: 4px solid transparent;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.skill-card i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.html-icon { color: #E34F26; }
+.css-icon { color: #1572B6; }
+.js-icon { color: #F7DF1E; }
+.react-icon { color: #61DAFB; }
+.ts-icon { color: #3178C6; }
+.tailwind-icon { color: #06B6D4; }
+.php-icon { color: #777BB4; }
+.java-icon { color: #007396; }
+.python-icon { color: #3776AB; }
+.node-icon { color: #339933; }
+.mongo-icon { color: #47A248; }
+.sql-icon { color: #4479A1; }
+.git-icon { color: #F05032; }
+.docker-icon { color: #2496ED; }
+.jest-icon { color: #C21325; }
+
+.frontend-card:hover { border-bottom-color: #61DAFB; }
+.backend-card:hover { border-bottom-color: #339933; }
+.tools-card:hover { border-bottom-color: #F05032; }
+

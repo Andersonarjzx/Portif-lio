@@ -74,94 +74,113 @@
             </div>
         </section>
 
-        <section id="skills" class="skills section bg-alt">
-            <div class="container">
-                <h2 class="section-title reveal-text">Minhas <span>Habilidades</span></h2>
-                <div class="skills-grid">
-                    <div class="skill-card reveal fade-bottom">
-                        <i class="fab fa-html5 skill-icon"></i>
-                        <h3>HTML5</h3>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar" data-progress="95%"></div>
-                        </div>
-                        <span class="progress-label">95%</span>
-                    </div>
-                    <div class="skill-card reveal fade-bottom delay-1">
-                        <i class="fab fa-css3-alt skill-icon"></i>
-                        <h3>CSS3</h3>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar" data-progress="90%"></div>
-                        </div>
-                        <span class="progress-label">90%</span>
-                    </div>
-                    <div class="skill-card reveal fade-bottom delay-2">
-                        <i class="fab fa-js-square skill-icon"></i>
-                        <h3>JavaScript</h3>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar" data-progress="80%"></div>
-                        </div>
-                        <span class="progress-label">80%</span>
-                    </div>
-                    <div class="skill-card reveal fade-bottom delay-3">
-                        <i class="fab fa-github skill-icon"></i>
-                        <h3>Git & GitHub</h3>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar" data-progress="75%"></div>
-                        </div>
-                        <span class="progress-label">75%</span>
-                    </div>
+       <section id="skills" class="skills section bg-alt">
+    <div class="container">
+        <h2 class="section-title reveal-text">Minhas <span>Habilidades</span></h2>
+        
+        <div class="skills-tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'frontend')">
+                <i class="fas fa-desktop"></i> Front-end
+            </button>
+            <button class="tab-btn" onclick="openTab(event, 'backend')">
+                <i class="fas fa-code-branch"></i> Back-end
+            </button>
+            <button class="tab-btn" onclick="openTab(event, 'tools')">
+                <i class="fas fa-tools"></i> Ferramentas & Outros
+            </button>
+        </div>
 
-                    <div class="skill-card reveal fade-bottom">
-                        <i class="fab fa-react skill-icon"></i>
-                        <h3>React.js</h3>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar" data-progress="70%"></div>
-                        </div>
-                        <span class="progress-label">70%</span>
-                    </div>
-                    <div class="skill-card reveal fade-bottom delay-1">
-                        <i class="fab fa-reacteurope skill-icon"></i> 
-                        <h3>React Native</h3>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar" data-progress="65%"></div>
-                        </div>
-                        <span class="progress-label">65%</span>
-                    </div>
-                    <div class="skill-card reveal fade-bottom delay-2">
-                        <i class="fas fa-code skill-icon"></i> 
-                        <h3>Next.js</h3>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar" data-progress="60%"></div>
-                        </div>
-                        <span class="progress-label">60%</span>
-                    </div>
-                    <div class="skill-card reveal fade-bottom delay-3">
-                        <i class="fab fa-php skill-icon"></i>
-                        <h3>PHP</h3>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar" data-progress="70%"></div>
-                        </div>
-                        <span class="progress-label">70%</span>
-                    </div>
-                    <div class="skill-card reveal fade-bottom">
-                        <i class="fab fa-java skill-icon"></i>
-                        <h3>Java</h3>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar" data-progress="60%"></div>
-                        </div>
-                        <span class="progress-label">60%</span>
-                    </div>
-                    <div class="skill-card reveal fade-bottom delay-1">
-                        <i class="fas fa-database skill-icon"></i>
-                        <h3>MongoDB</h3>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar" data-progress="75%"></div>
-                        </div>
-                        <span class="progress-label">75%</span>
-                    </div>
+        <div id="frontend" class="tab-content active">
+            <div class="skills-grid">
+                <div class="skill-card frontend-card">
+                    <i class="fab fa-html5 html-icon"></i>
+                    <h3>HTML5</h3>
+                    <p>Estruturação semântica e SEO.</p>
+                </div>
+                <div class="skill-card frontend-card">
+                    <i class="fab fa-css3-alt css-icon"></i>
+                    <h3>CSS3</h3>
+                    <p>Flexbox, Grid e Animações.</p>
+                </div>
+                <div class="skill-card frontend-card">
+                    <i class="fab fa-js js-icon"></i>
+                    <h3>JavaScript</h3>
+                    <p>ES6+, DOM e Fetch API.</p>
+                </div>
+                <div class="skill-card frontend-card">
+                    <i class="fab fa-react react-icon"></i>
+                    <h3>React.js</h3>
+                    <p>Hooks, Context API e Estados.</p>
+                </div>
+                <div class="skill-card frontend-card">
+                    <i class="fas fa-file-code ts-icon"></i>
+                    <h3>TypeScript</h3>
+                    <p>Tipagem estática e segurança.</p>
+                </div>
+                <div class="skill-card frontend-card">
+                    <i class="fab fa-uikit tailwind-icon"></i>
+                    <h3>Tailwind CSS</h3>
+                    <p>Estilização utilitária rápida.</p>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <div id="backend" class="tab-content">
+            <div class="skills-grid">
+                <div class="skill-card backend-card">
+                    <i class="fab fa-php php-icon"></i>
+                    <h3>PHP</h3>
+                    <p>Desenvolvimento Server-side.</p>
+                </div>
+                <div class="skill-card backend-card">
+                    <i class="fab fa-java java-icon"></i>
+                    <h3>Java</h3>
+                    <p>POO e Spring Boot básico.</p>
+                </div>
+                <div class="skill-card backend-card">
+                    <i class="fab fa-python python-icon"></i>
+                    <h3>Python</h3>
+                    <p>Scripts e Django/Flask.</p>
+                </div>
+                <div class="skill-card backend-card">
+                    <i class="fab fa-node-js node-icon"></i>
+                    <h3>Node.js</h3>
+                    <p>APIs RESTful e Express.</p>
+                </div>
+                <div class="skill-card backend-card">
+                    <i class="fas fa-database mongo-icon"></i>
+                    <h3>MongoDB</h3>
+                    <p>Bancos NoSQL e Agregações.</p>
+                </div>
+                <div class="skill-card backend-card">
+                    <i class="fas fa-server sql-icon"></i>
+                    <h3>MySQL/PostgreSQL</h3>
+                    <p>Queries complexas e Relacionamentos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="tools" class="tab-content">
+            <div class="skills-grid">
+                <div class="skill-card tools-card">
+                    <i class="fab fa-git-alt git-icon"></i>
+                    <h3>Git & GitHub</h3>
+                    <p>Controle de versão e colaboração.</p>
+                </div>
+                <div class="skill-card tools-card">
+                    <i class="fab fa-docker docker-icon"></i>
+                    <h3>Docker</h3>
+                    <p>Containerização de aplicações.</p>
+                </div>
+                <div class="skill-card tools-card">
+                    <i class="fas fa-vial jest-icon"></i>
+                    <h3>Jest</h3>
+                    <p>Testes unitários e integração.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section id="projects" class="projects section">
             <div class="container">
