@@ -231,19 +231,19 @@ document.addEventListener('DOMContentLoaded', () => {
 function openTab(evt, tabName) {
     var i, tabContent, tabBtns;
 
-    // Esconde todo o conteúdo das abas
+    
     tabContent = document.getElementsByClassName("tab-content");
     for (i = 0; i < tabContent.length; i++) {
         tabContent[i].classList.remove("active");
     }
 
-    // Remove a classe 'active' de todos os botões
+    
     tabBtns = document.getElementsByClassName("tab-btn");
     for (i = 0; i < tabBtns.length; i++) {
         tabBtns[i].classList.remove("active");
     }
 
-    // Mostra a aba atual e adiciona a classe 'active' ao botão que a abriu
+    
     document.getElementById(tabName).classList.add("active");
     evt.currentTarget.classList.add("active");
 }
