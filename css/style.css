@@ -550,6 +550,11 @@ body:not(.light-mode) .skill-card {
     margin-bottom: 25px;
 }
 
+.timeline .timeline-title {
+    padding-left: 40px !important;
+    display: inline-block; 
+}
+
 .social-icon {
     font-size: 2rem;
     color: var(--secondary-color);
